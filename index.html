@@ -25,14 +25,26 @@
                 </nav>
             </div>
             <section class="page-header col-xs-8 col-xs-offset-4 col-lg-9 col-lg-offset-3">
-                <img alt="" src="media/logo_myparcel.png" />
                 <h1 class="project-name">
-                    MyParcel BE API Documentation
+                     MyParcel BE API Documentation
                 </h1>
-                <h2 class="project-tagline">
-                    <span id="current_version"></span>
-                </h2>
-                <a target="_blank" class="btn" href="https://github.com/myparcelbe/api/releases">Laatste updates</a>
+                <p class="project-tagline">
+                    Last adjustments: <span id="current_version"></span>
+                </p>
+                <a target="_blank" class="btn" href="https://github.com/myparcelbe/api/commits/">Show the latest adjustments</a>
+                <div class="postman-run-button"
+                     data-postman-action="collection/import"
+                     data-postman-var-1="23326831fdc77bc0615b"
+                     data-postman-param="env%5BMyParcel%20public%5D=W3sia2V5IjoiYXBpX2tleSIsInZhbHVlIjoiIiwiZW5hYmxlZCI6dHJ1ZSwidHlwZSI6InRleHQifV0="></div>
+                <script type="text/javascript">
+                    (function (p,o,s,t,m,a,n) {
+                        !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
+                        !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
+                            (n = o.createElement("script")),
+                                (n.id = s+t), (n.async = 1), (n.src = m), n
+                        ));
+                    }(window, document, "_pm", "PostmanRunObject", "https://run.pstmn.io/button.js"));
+                </script>
             </section>
             <section class="main-content col-xs-8 col-xs-offset-4 col-lg-7 col-lg-offset-4">
                 <h1>Introduction</h1>
@@ -41,15 +53,30 @@
                     Our API is build in such a way to easily handle bulk operations.
                     We try to follow the REST
                     architecture as much as possible but deviate from it when we need to achieve high performance.
+                    <div class="postman-run-button"
+                         data-postman-action="collection/import"
+                         data-postman-var-1="23326831fdc77bc0615b"
+                         data-postman-param="env%5BMyParcel%20public%5D=W3sia2V5IjoiYXBpX2tleSIsInZhbHVlIjoiIiwiZW5hYmxlZCI6dHJ1ZSwidHlwZSI6InRleHQifV0="></div>
+                    <script type="text/javascript">
+                        (function (p,o,s,t,m,a,n) {
+                            !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
+                            !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
+                                (n = o.createElement("script")),
+                                    (n.id = s+t), (n.async = 1), (n.src = m), n
+                            ));
+                        }(window, document, "_pm", "PostmanRunObject", "https://run.pstmn.io/button.js"));
+                    </script>
                 </p>
-                <p>
-                    Do you want to connect with MyParcel using PHP, C# or Ruby? Then you can use the following github projects instead of the API. Create an issue on github to contact the programmer.
-                </p>
-                <ul>
-                    <li><a href="https://github.com/myparcelbe/sdk" target="_blank">PHP</a></li>
-                    <li><a href="https://github.com/janssenr/MyParcelApi.Net" target="_blank">C#/.net</a></li>
-                    <li><a href="https://github.com/paypronl/myparcel" target="_blank">Ruby</a></li>
-                </ul>
+                <div class="box">
+                  <p>
+                      Do you want to connect with MyParcel using PHP, C# or Ruby? Then you can use the following github projects instead of the API. Create an issue on github to contact the programmer.
+                  </p>
+                  <ul>
+                      <li><a href="https://github.com/myparcelbe/sdk" target="_blank">PHP</a></li>
+                      <li><a href="https://github.com/janssenr/MyParcelApi.Net" target="_blank">C#/.net</a></li>
+                      <li><a href="https://github.com/paypronl/myparcel" target="_blank">Ruby</a></li>
+                  </ul>
+                </div>
                 <div>
                     <h1 id="1">1. Requests</h1>
                     <h2 id="1_A">1.A Base URL</h2>
@@ -278,7 +305,7 @@ Connection: keep-alive
                         </tr>
                         <tr>
                             <td>pattern</td>
-                            <td>\d+</td>
+                            <td>\d</td>
                         </tr>
                         <tr>
                             <td>example</td>
@@ -659,8 +686,8 @@ Connection: keep-alive
                     <h1 id="5">5. Authentication</h1>
                     <p>
                         HTTP basic access authentication on top of SSL is used for authentication. Every request must include
-                        an
-                        Authorization header with base64 encoded API Key.
+                        an Authorization header with base64 encoded API Key. Go to
+                        <a target="_blank" href="https://www.base64encode.org/">base64encode.org</a> to convert your key base64.
                     </p>
 <pre>
 GET /somelink HTTP/1.1
@@ -686,14 +713,24 @@ Authorization: basic eUVJV1hFc3ZhMkxPeWRvVlM1bDVVZVJwamJNdVZQQXJSUGhFVkpCYw==
                     <h1 id="6">6. Shipments</h1>
                     <p>
                         We’ll start the shipment section with the different shipment option combinations available in
-                        MyParcel
-                        (6.a). It is highly recommended that you read this first as this section helps you understand what
-                        all
-                        the shipment options are and which combinations are possible. We will not list every possible
+                        MyParcel (6.a). It is highly recommended that you read this first as this section helps you understand what
+                        all the shipment options are and which combinations are possible. We will not list every possible
                         combination since there are too many to list. We will look at the different package types and then
-                        look
-                        at the different options available to them. Then we bring all of it together with some examples.
+                        look at the different options available to them. Then we bring all of it together with some examples.
                     </p>
+                    <div class="postman-run-button"
+                         data-postman-action="collection/import"
+                         data-postman-var-1="23326831fdc77bc0615b"
+                         data-postman-param="env%5BMyParcel%20public%5D=W3sia2V5IjoiYXBpX2tleSIsInZhbHVlIjoiIiwiZW5hYmxlZCI6dHJ1ZSwidHlwZSI6InRleHQifV0="></div>
+                    <script type="text/javascript">
+                        (function (p,o,s,t,m,a,n) {
+                            !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
+                            !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
+                                (n = o.createElement("script")),
+                                    (n.id = s+t), (n.async = 1), (n.src = m), n
+                            ));
+                        }(window, document, "_pm", "PostmanRunObject", "https://run.pstmn.io/button.js"));
+                    </script>
                     <h2 id="6_A">6.A Shipment option combinations</h2>
                     <h3>Contents</h3>
                     <h3 id="6_A_1">6.A.1 Package types</h3>
@@ -1089,7 +1126,7 @@ Authorization:basic eUVJV1hFc3ZhMkxPeWRvVlM1bDVVZVJwamJNdVZQQXJSUGhFVkpCYw==
         "signature": 1,
         "return": 0,
         "insurance": {
-          "amount": 50,
+          "amount": 5000,
           "currency": "EUR"
         }
       }
@@ -1160,7 +1197,7 @@ HTTP/1.1 200 OK Content-Type:application/json; charset=utf-8
                         Use this link to remove shipments. You can specify multiple shipment ids by semicolon separating them
                         on
                         the URL. Only shipments with <strong>status 'pending - concept'</strong> can be deleted. This method returns
-                        HTTP/1.1 201 if successful. If the shipment doesn’t exist a 422 "cannot delete shipment" is
+                        HTTP/1.1 204 if successful. If the shipment doesn’t exist a 422 "cannot delete shipment" is
                         returned.
                     </p>
                     <h3 id="6_C_2">6.C.2 Reference</h3>
@@ -1197,7 +1234,7 @@ HTTP/1.1 200 OK Content-Type:application/json; charset=utf-8
                         </tr>
                         <tr>
                             <th>Response</th>
-                            <td>HTTP/1.1 201 OK</td>
+                            <td>HTTP/1.1 204 NO CONTENT</td>
                         </tr>
                         <tr>
                             <th>Response body</th>
@@ -1227,8 +1264,9 @@ User-Agent: CustomApiCall/2
 Authorization:basic eUVJV1hFc3ZhMkxPeWRvVlM1bDVVZVJwamJNdVZQQXJSUGhFVkpCYw==
 </pre>
                     <p><strong>Response</strong></p>
-                    <pre>HTTP/1.1 201 No Content </pre>
-                    <h2 id="6_D">6.D Generate unrelated return shipment</h2>
+                    <pre>HTTP/1.1 204 No Content </pre>
+
+                    <h2 id="6_D">6.D Generate unrelated return shipment url</h2>
                     <h3 id="6_D_1">6.D.1 Overview</h3>
                     <p>
                         This endpoint is often used by external parties to facilitate return shipments on a dedicated part of
@@ -3084,6 +3122,20 @@ HTTP/1.1 200 OK Content-Type:application/json; charset=utf-8
                         <strong>Objects</strong><br>
                         Upon success two <a href="#array">arrays</a> are returned one for <a href="#9_A">DeliveryOptions</a> and one
                         for <a href="#9_B">PickupOptions</a> objects is returned. This object contains delivery date, time and pricing. Upon error an Error object is returned.
+                        <br/>
+                        <div class="postman-run-button"
+                             data-postman-action="collection/import"
+                             data-postman-var-1="23326831fdc77bc0615b"
+                             data-postman-param="env%5BMyParcel%20public%5D=W3sia2V5IjoiYXBpX2tleSIsInZhbHVlIjoiIiwiZW5hYmxlZCI6dHJ1ZSwidHlwZSI6InRleHQifV0="></div>
+                        <script type="text/javascript">
+                            (function (p,o,s,t,m,a,n) {
+                                !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
+                                !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
+                                    (n = o.createElement("script")),
+                                        (n.id = s+t), (n.async = 1), (n.src = m), n
+                                ));
+                            }(window, document, "_pm", "PostmanRunObject", "https://run.pstmn.io/button.js"));
+                        </script>
                     </p>
                     <h3 id="8_A_2">8.A.2 Reference</h3>
                     <table>
@@ -3761,11 +3813,22 @@ HTTP/1.1 200 OK Content-Type:application/json;charset=utf-8
                     <h3 id="10_A_1">10.A.1 Overview</h3>
                     <p>
                         Use this endpoint to subscribe to an event in our API. Upon success a HTTP/1.1 200 OK with
-                        subscription
-                        ids is returned. You must use HTTPS for callback because it's secure and temper proof. Adding the
-                        same
-                        webhook overwrites the existing one.
+                        subscription ids is returned. You must use HTTPS for callback because it's secure and temper proof.
+                        Adding the same webhook overwrites the existing one. <b>Tip:</b> You can test webhooks with <a href="https://webhook.site/">Webhook Tester</a>
                     </p>
+                    <div class="postman-run-button"
+                         data-postman-action="collection/import"
+                         data-postman-var-1="23326831fdc77bc0615b"
+                         data-postman-param="env%5BMyParcel%20public%5D=W3sia2V5IjoiYXBpX2tleSIsInZhbHVlIjoiIiwiZW5hYmxlZCI6dHJ1ZSwidHlwZSI6InRleHQifV0="></div>
+                    <script type="text/javascript">
+                        (function (p,o,s,t,m,a,n) {
+                            !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
+                            !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
+                                (n = o.createElement("script")),
+                                    (n.id = s+t), (n.async = 1), (n.src = m), n
+                            ));
+                        }(window, document, "_pm", "PostmanRunObject", "https://run.pstmn.io/button.js"));
+                    </script>
                     <h3 id="10_A_2">10.A.2 Reference</h3>
                     <table>
                         <tr>
@@ -4117,14 +4180,15 @@ HTTP/1.1 200 OK Content-Type:application/json;charset=utf-8
                     </p>
                     <h1 id="12">12. Document changes</h1>
                     <p>
-                        <a target="_blank" href="https://github.com/myparcelbe/api/releases">Click here</a> for the latest version of the API documentation. Last version update is done on <span id="current_version_date"></span>.
+                        <a target="_blank" href="https://github.com/myparcelbe/api/commits">Click here</a> for the latest version of the API documentation. Last version update is done on <span id="current_version_date"></span>.
                     </p>
                     <script>
-                        $.get('https://api.github.com/repos/myparcelbe/api/releases/latest', function (data) {
-                            var day = data.published_at.split('T')[0];
+                       	$.get('https://api.github.com/repos/myparcelbe/api/commits', function (data) {
+                            var day = data[0].commit.author.date.split('T')[0];
+
                             var parts = day.split('-');
                             $('#current_version_date').html(parts[2] + '-' + parts[1] + '-' + parts[0]);
-                            $('#current_version').html(data.name);
+                            $('#current_version').html(data[0].commit.message);
                         });
                     </script>
                     <footer class="site-footer">
