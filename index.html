@@ -1154,69 +1154,6 @@ HTTP/1.1 200 OK Content-Type:application/json; charset=utf-8
   }
 }
 </pre>
-                <h2>Create International DPD shipment</h2>
-                <p><strong>Request</strong></p>
-                <pre>
-POST https://api.sendmyparcel.be/shipments HTTP/1.1
-Content-Type:application/vnd.shipment+json; charset=utf-8
-User-Agent: CustomApiCall/2
-Authorization:basic eUVJV1hFc3ZhMkxPeWRvVlM1bDVVZVJwamJNdVZQQXJSUGhFVkpCYw==
-{
-  "data": {
-    "shipments": [{
-      "recipient": {
-        "cc": "JP",
-        "region": "埼玉県",
-        "city": "さいたま市",
-        "street": "埼玉県さいたま市浦和区 常盤9－21－21",
-        "number": "12",
-        "postal_code": "12345",
-        "person": "Tanaka san",
-        "company": "さいたま国際キリスト教会",
-        "email": "saitamakyokai@gmail.com",
-        "phone": "0081-48-825-6637"
-      },
-      "options": {
-        "package_type": 1
-      },
-        "customs_declaration": {
-          "contents": 1,
-          "items": [
-            {
-              "country": "BE",
-              "item_value": {
-                "amount": 10000,
-                "currency": "EUR"
-              },
-              "description": "1",
-              "amount": 1,
-              "weight": 3000,
-              "classification": ""
-            }
-          ],
-          "weight": 3000
-        },
-        "physical_properties": {
-          "weight": 1000
-        },
-      "carrier": 4
-    }]
-  }
-}
-</pre>
-                <p><strong>Response</strong></p>
-                <pre>
-HTTP/1.1 200 OK Content-Type:application/json; charset=utf-8
-{
-  "data": {
-    "ids": [{
-      "id": 3485394579
-    }]
-  }
-}
-</pre>
-
-
                 <h2>Create bpost shipment with BE pickup location</h2>
                 <p><strong>Request</strong></p>
                 <pre>
