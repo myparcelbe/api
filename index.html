@@ -990,7 +990,6 @@ Authorization: basic eUVJV1hFc3ZhMkxPeWRvVlM1bDVVZVJwamJNdVZQQXJSUGhFVkpCYw==
                     Specify this content-type when you want to create standard shipments.<br>
                     <br>
                     <strong>Content-Type: application/vnd.return_shipment+json</strong><br>
-                    Specify this content-type when you want to create related return shipments.<br>
                     Parent shipment cannot be a concept (<a href="#shipment_status">shipment_status</a> 1).<br>
                     When a label is generated, the status of the shipment is converted to registered (<a
                         href="#shipment_status">shipment_status</a> 2).<br>
@@ -1323,43 +1322,6 @@ HTTP/1.1 200 OK Content-Type:application/json; charset=utf-8
     }
 }
 </pre>
-                <h2>Create related return shipment</h2>
-                <p><strong>Request</strong></p>
-                <pre>
-POST https://api.sendmyparcel.be/shipments HTTP/1.1
-Content-Type:application/vnd.return_shipment+json;charset=utf-8
-User-Agent: CustomApiCall/2
-Authorization:basic eUVJV1hFc3ZhMkxPeWRvVlM1bDVVZVJwamJNdVZQQXJSUGhFVkpCYw==
-{
-  "data": {
-    "return_shipments": [{
-      "parent": 5,
-      "carrier": 2,
-      "email": "testing@sendmyparcel.be",
-      "name": "Mr. Parcel",
-      "options": {
-        "package_type": 1,
-        "signature": 1,
-        "return": 0,
-        "insurance": {
-          "amount": 5000,
-          "currency": "EUR"
-        }
-      }
-    }]
-  }
-}
-</pre>
-                <p><strong>Response</strong></p>
-                <pre>
-HTTP/1.1 200 OK Content-Type:application/json; charset=utf-8
-{
-  "data": {
-    "ids": [{
-      "id": 12345
-    }]
-  }
-}</pre>
                 <h2>Create unrelated return shipment</h2>
                 <p><strong>Request</strong></p>
                 <pre>
